@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from mongoengine import connect
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,3 +122,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+connect(
+    db='agri_auto_db',
+    host='mongodb+srv://wissaltalbi65:nauMAsNsyBG89n7T@cluster0.qi2niyh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+)
